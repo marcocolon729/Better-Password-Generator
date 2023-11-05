@@ -5,14 +5,20 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: purple;
 }
 
 .container {
     text-align: center;
+    background-color: purple;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     margin-bottom: 20px;
+    color: #d22424;
 }
 
 .password-box {
@@ -24,12 +30,22 @@ input {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 .options {
