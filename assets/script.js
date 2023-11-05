@@ -1,11 +1,10 @@
 function generatePassword() {
-    var length = prompt("Choose the length of the password (between 8 and 128 characters):");
+    var length = document.getElementById("length").value;
     length = parseInt(length);
 
-    // Validate the length input
     if (isNaN(length) || length < 8 || length > 128) {
         alert("Please enter a valid password length between 8 and 128 characters.");
-        return; // Stops the function if input is invalid
+        return;
     }
 
     var includeLowercase = confirm("Include lowercase characters?");
@@ -13,10 +12,9 @@ function generatePassword() {
     var includeNumbers = confirm("Include numeric characters?");
     var includeSpecialChars = confirm("Include special characters?");
 
-    // Validate if at least one character type is selected
     if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecialChars) {
         alert("Please select at least one character type for the password.");
-        return; // Stops the function if no character type is selected
+        return;
     }
 
     var charset = "";
@@ -31,5 +29,5 @@ function generatePassword() {
         password += charset[randomChar];
     }
 
-    alert("Your generated password is: " + password);
+    document.getElementById("password").value = password; // Display the generated password in the input field
 }
